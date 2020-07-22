@@ -19,7 +19,7 @@ A working full-stack CRUD application using Ruby on Rails with React and Redux, 
 
 ## Wireframe
 
-<img src="./wireframe.png" alt text="wire frame">
+<img src="https://github.com/mendokuse3/Capstone_Project/blob/master/Wireframe.png" alt text="wire frame">
 
 ## User Stories
 As a User, I want to be able to: 
