@@ -18,9 +18,28 @@ router.get('/', (req, res) => {
 // =======
 
 router.post('/', (req, res) => {
-    console.log(req.body)
     Notes.create(req.body, (err, createdNote) => {
         res.json(createdNote);
+    })
+})
+
+// =======
+// Update
+// =======
+
+router.put('/:id', (req, res) => {
+    Notes.findOneAndUpdate(req.params.id, req.body, (err, updatedNote) => {
+        res.json(updatedNote);
+    })
+})
+
+// =======
+// DELETE
+// =======
+
+router.delete('/:id', (req, res) => {
+    Notes.findOneAndDelete(req.params.id, (err, deletedNote) => {
+        res.json(deletedNote);
     })
 })
 
