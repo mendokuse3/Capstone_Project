@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-export default class Note extends Component {
+export default class Notes extends Component {
 
     componentDidMount(){
+        console.log('this is from the note component')
         this.getData();
     }
       getData = () => {
@@ -12,7 +13,6 @@ export default class Note extends Component {
     }
 
     render(){
-        console.log('this is from the note component')
         return(
             <div>notes</div>
         )
