@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Form from './NoteForm'
 
 export const Notes = () => {
     const [state, setState] = useState([]);
@@ -28,6 +29,7 @@ export const Notes = () => {
                     )
                 }))
             }
+            <Form state={state} updateNotes={setState}/>
         </div>
     )
 }
