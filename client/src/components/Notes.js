@@ -19,6 +19,15 @@ export const Notes = () => {
             setLoading(false)
         })
     };
+    const deleteNote = (id, index) => {
+        fetch(`http://localhost:3000/notes/${id}`, {method: 'DELETE'})
+        .then(() => {
+            setState([
+                    ...state.slice(0,index), ...state.slice(index +1)
+            ])
+        })
+    }
+
     
     useEffect(() => {
         getData();
@@ -34,7 +43,7 @@ export const Notes = () => {
                             <div key={index} >
                                 {note.item_name} is at {note.description}
                                 <button onClick={() => setSelectedNote(note)}>Edit</button>
-                                <button>Delete</button>
+                                <button onClick={() => deleteNote(note._id, index)}>Delete</button>
                             </div>
                         )
                     }))
