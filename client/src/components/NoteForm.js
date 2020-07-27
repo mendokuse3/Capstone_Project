@@ -12,7 +12,7 @@ export default class Form extends Component {
             body: JSON.stringify(this.state),
             method: "POST",
             headers: {
-              Accept: "application/json, text/plain, */*",
+              'Accept': "application/json, text/plain, */*",
               "Content-Type": "application/json",
             }
         }).then(response => response.json())
