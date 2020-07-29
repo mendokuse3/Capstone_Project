@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { sayItem } from '../actions/actions';
 
-export class Items extends React.Component {
+class Items extends Component {
+
+    handleSayItem = () => {
+        this.props.sayItem('hello')
+    }
+
     render(){
         return (
             <h1>hi</h1>
@@ -8,4 +15,8 @@ export class Items extends React.Component {
     }
 }
 
+export default connect(
+    null,
+    {sayItem}
+)(Items)
 

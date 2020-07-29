@@ -1,12 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { createStore, compse } from 'redux';
-import { syncHistoryWithStore } from 'react-router-redux';
-import { browserHistory } from 'react-router';
+// import { createStore, compse } from 'redux';
+// import { syncHistoryWithStore } from 'react-router-redux';
+// import { browserHistory } from 'react-router';
 
 import comments from '../reducers/test';
 
-export default configureStore({
+const store = configureStore({
   reducer: {
-    counter: comments,
-  },
+    bob: comments
+  }
 });
+
+console.log(store.getState())
+export default store
