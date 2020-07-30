@@ -7,8 +7,14 @@ import '../css/Item.css';
 
 export default class Items extends Component {
 
+    cycleItem = (item) => {
+        if(this.props[item] === true){
+            
+        }
+    }
 
     render(){
+        console.log(this.props)
         return (
             <div>
                 <div className='row'>
