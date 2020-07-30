@@ -8,13 +8,16 @@ import '../css/Item.css';
 export default class Items extends Component {
 
     cycleItem = (item) => {
-        if(this.props[item] === true){
-            
+        if(this.props[item].has === true){
+            let num = this.props[item].counter;
+            this.props[item].counter ++;
+            return this.props[item][num]
         }
     }
 
     render(){
-        console.log(this.props)
+        // console.log(this.props.bow)
+        console.log(this.cycleItem('bow'))
         return (
             <div>
                 <div className='row'>
