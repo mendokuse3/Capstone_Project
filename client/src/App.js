@@ -1,6 +1,6 @@
 import React from 'react';
 import {Notes} from './components/Notes'
-import Items from './components/Items'
+import Items from './containers/Items'
 
 
 export default function App() {

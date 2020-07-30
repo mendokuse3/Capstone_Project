@@ -1,29 +1,24 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import { sayItem } from '../actions/actions';
 import itemData from '../assets/itemData';
 import dungeons from '../assets/dungeons';
 import etc from '../assets/etc';
 import '../css/Item.css';
 
-class Items extends Component {
 
-    handleSayItem = () => {
-        this.props.sayItem('hello')
-    }
+export default class Items extends Component {
+
 
     render(){
         return (
             <div>
-                <button onClick={() => this.props.sayItem()} >Click Me</button>
                 <div className='row'>
-                    <div className={`item ${itemData.bow[0]}`}></div>
+                    <div className={`item ${itemData.bow[0]}`} onClick={() => this.props.toggleItem(itemData.bow, 'bow')}></div>
                     <div className={`item ${itemData.boomerang[0]}`}></div>
                     <div className={`item ${itemData.hookshot[0]}`}></div>
                     <div className={`item ${itemData.bomb[0]}`}></div>
                     <div className={`item ${itemData.powder[0]}`}></div>
                     <div className={`item ${itemData.mushroom[0]}`}></div>
-                    <div className={`item ${dungeons.EP[0]} ${etc.crystal[0]}`}></div>
+                    <div className={`item ${dungeons.EP[0]} ${etc.crystal[0]}`} onClick={() => this.props.toggleDungeon(etc.crystal, dungeons.EP)}></div>
                 </div>
 
                 <div className='row'>
@@ -80,22 +75,4 @@ class Items extends Component {
         )
     }
 }
-
-// const mapStateToProps = state => {
-//     return {
-
-//     }
-// }
-
-// const mapDispatchToProps = dispatch => {
-//     return 
-// }
-
-
-export default connect(
-    // mapStateToProps,
-    // mapDispatchToProps,
-    null,
-    {sayItem}
-)(Items)
 
