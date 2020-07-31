@@ -8,20 +8,19 @@ import '../css/Item.css';
 export default class Items extends Component {
 
     cycleItem = (item) => {
-        if(this.props[item].has === true){
-            let num = this.props[item].counter;
-            this.props[item].counter ++;
-            return this.props[item][num]
+        if(this.props[item] === true){
+            
         }
     }
 
     render(){
-        // console.log(this.props.bow)
-        console.log(this.cycleItem('bow'))
+        // console.log(this.props)
         return (
             <div>
                 <div className='row'>
-                    <div className={`item ${itemData.bow[0]}`} onClick={() => this.props.toggleItem(itemData.bow, 'bow')}></div>
+                    <button onClick={() => this.cycleItem(this.props, 'bow')}>click</button>
+                    {/* <button onClick={() => this.props.incrementCounter(itemData.bow, 'bow')}>click</button> */}
+                    <div className={`item ${itemData.bow[0]}`} onClick={() => this.props.toggleItem(this.props.getItems, 'bow')}></div>
                     <div className={`item ${itemData.boomerang[0]}`}></div>
                     <div className={`item ${itemData.hookshot[0]}`}></div>
                     <div className={`item ${itemData.bomb[0]}`}></div>
@@ -84,4 +83,5 @@ export default class Items extends Component {
         )
     }
 }
+
 

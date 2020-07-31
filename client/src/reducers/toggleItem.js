@@ -1,6 +1,7 @@
 const toggleItem = (state = [], action) => {
     if(action.type === 'TOGGLE_ITEM'){
-        // console.log(state[action.payload.itemName].has)
+        // console.log(state)
+
         const newState = {
             ...state,
             [action.payload.itemName]: {
@@ -8,6 +9,7 @@ const toggleItem = (state = [], action) => {
                 has: !state[action.payload.itemName].has
             }
         }
+        console.log(newState)
         return newState;
     }
     return state;
