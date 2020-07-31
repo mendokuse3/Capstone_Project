@@ -13,14 +13,18 @@ export default class Items extends Component {
         }
     }
 
+    componentDidUpdate(){
+        console.log(this.props)
+    }
+
     render(){
-        // console.log(this.props)
+        console.log(this.props)
         return (
             <div>
                 <div className='row'>
-                    <button onClick={() => this.cycleItem(this.props, 'bow')}>click</button>
-                    {/* <button onClick={() => this.props.incrementCounter(itemData.bow, 'bow')}>click</button> */}
-                    <div className={`item ${itemData.bow[0]}`} onClick={() => this.props.toggleItem(this.props.getItems, 'bow')}></div>
+                    {/* <button onClick={() => this.cycleItem(this.props, 'bow')}>click</button> */}
+                    <button onClick={() => this.props.toggleItem(this.props.bow, 'bow', 'INCREMENT_COUNTER')}>click</button>
+                    <div className={`item ${itemData.bow[0]}`} onClick={() => this.props.toggleItem(this.props.getItems, 'bow', 'TOGGLE_ITEM')}></div>
                     <div className={`item ${itemData.boomerang[0]}`}></div>
                     <div className={`item ${itemData.hookshot[0]}`}></div>
                     <div className={`item ${itemData.bomb[0]}`}></div>

@@ -9,8 +9,11 @@ const toggleItem = (state = [], action) => {
                 has: !state[action.payload.itemName].has
             }
         }
-        console.log(newState)
+        // console.log(newState)
         return newState;
+    }
+    else if (action.type === 'INCREMENT_COUNTER'){
+            console.log('hi')
     }
     return state;
 }

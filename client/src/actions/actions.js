@@ -1,6 +1,6 @@
 
-export const toggleItem = (content, itemName) => ({
-    type: 'TOGGLE_ITEM',
+export const toggleItem = (content, itemName, bob) => ({
+    type: bob,
     payload: {
         content,
         itemName
@@ -12,5 +12,13 @@ export const toggleDungeon = (crystal, name) => ({
     payload: {
         crystal,
         name
+    }
+})
+
+export const incrementCounter = (content, itemName) => ({
+    type: 'INCREMENT_COUNTER',
+    payload: {
+        content,
+        itemName
     }
 })
