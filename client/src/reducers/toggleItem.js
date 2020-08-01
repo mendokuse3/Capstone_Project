@@ -3,6 +3,7 @@ const toggleItem = (state = [], action) => {
     if(action.type === 'TOGGLE_ITEM'){
         // console.log(action.payload.content)
         console.log(state)
+        console.log(action)
 
         // const newState = {
         //     ...state,

@@ -32,22 +32,29 @@ export default class Items extends Component {
 
 
     render(){
-        // console.log(this.props)
+        console.log()
         return (
             <div>
+                {/* {this.props.seedData && this.props.seedData.bow.current.map((item, i) => {
+                    console.log(item)
+                    return (
+                        <div >hi</div>
+                    )
+                })} */}
                 <div className='row'>
                     {/* <button onClick={() => this.cycleItem(this.props, 'bow')}>click</button> */}
-                    <button onClick={() => this.props.toggleDungeon(this.props.bow, 'bow')}>click</button>
-                    <div className={`item ${itemData.bow[0]}`} onClick={() => this.props.toggleItem(this.props.bow, 'bow')}></div>
+                    <button onClick={() => this.props.toggleDungeon(this.prop.seedData.bow, 'bow')}>click</button>
+                    <div className={`item ${itemData.bow[0]}`} onClick={() => this.props.toggleItem(this.props.seedData.bow, 'bow')}></div>
                     <div className={`item ${itemData.boomerang[0]}`}></div>
                     <div className={`item ${itemData.hookshot[0]}`}></div>
                     <div className={`item ${itemData.bomb[0]}`}></div>
                     <div className={`item ${itemData.powder[0]}`}></div>
                     <div className={`item ${itemData.mushroom[0]}`}></div>
                     <div className={`item ${dungeons.EP[0]} ${etc.crystal[0]}`} onClick={() => this.props.toggleDungeon(etc.crystal, dungeons.EP)}></div>
-                </div>
+                </div> 
 
-                <div className='row'>
+
+                {/* <div className='row'>
                     <div className='item'>{itemData.firerod}</div>
                     <div className='item'>{itemData.icerod}</div>
                     <div className='item'>{itemData.bombos}</div>
@@ -95,7 +102,7 @@ export default class Items extends Component {
                     <div className='item'>{dungeons.IP}{etc.crystal}</div>
                     <div className='item'>{dungeons.MM}{etc.crystal}</div>
                     <div className='item'>{dungeons.TR}{etc.crystal}</div>
-                </div>
+                </div> */}
 
             </div>
         )

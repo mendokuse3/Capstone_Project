@@ -5,6 +5,7 @@ import rootReducer from '../reducers/index';
 
 // import stateData from './stateData';
 
+
 // const toggleItem = stateData
 
 // const defaultState = {
@@ -19,5 +20,5 @@ const store = createStore(rootReducer);
 //   // preloadedState: defaultState
 // });
 
-console.log(store.getState())
+// console.log(store.getState())
 export default store
