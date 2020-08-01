@@ -3,15 +3,16 @@ import { toggleItem, toggleDungeon } from '../actions/actions';
 
 import Items from '../components/Items';
 
+import stateData from '../app/stateData';
 
 const mapStateToProps = state => {
-    // console.log(state)
-    return state.toggleItem
+    state = stateData
+    return state
 }
 
 const mapDispatchToProps = {
     toggleItem,
-    toggleDungeon
+    toggleDungeon,
 }
 
 

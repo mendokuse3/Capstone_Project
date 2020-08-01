@@ -1,6 +1,6 @@
 const toggleDungeon = (state = [], action) => {
     if(action.type === 'TOGGLE_DUNGEON'){
-        console.log(action.payload)
+        console.log(state)
     }
     return state;
 }
