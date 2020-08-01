@@ -1,6 +1,6 @@
-import itemData from '../assets/itemData';
-import dungeons from '../assets/dungeons';
-import etc from '../assets/etc';
+import itemData from './assets/itemData';
+import dungeons from './assets/dungeons';
+import etc from './assets/etc';
 
 
 const stateData = {

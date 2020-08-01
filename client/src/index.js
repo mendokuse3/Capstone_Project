@@ -2,20 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import store from './app/store';
-import { Provider } from 'react-redux';
+import TrackerContext from './context/Context'
+import stateData from './stateData'
 import * as serviceWorker from './serviceWorker';
-import rootReducer from './reducers/index';
-import { createStore, applyMiddleware } from 'redux';
-import ReduxThunk from 'redux-thunk';
-
-const createStoreWithMiddleware = applyMiddleware(ReduxThunk)(createStore);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={createStoreWithMiddleware(rootReducer)}>
+    <TrackerContext.Provider value={stateData}>
       <App />
-    </Provider>
+    </TrackerContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
