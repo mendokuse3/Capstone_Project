@@ -4,7 +4,7 @@ const seedData = (state = [], action) => {
     if(action.type === 'SEED'){
         return stateData
     }
-    return 'afdasdfasdfasdf'
+    return stateData
 }
 
 export default seedData;
