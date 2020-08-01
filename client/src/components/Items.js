@@ -7,11 +7,28 @@ import '../css/Item.css';
 
 export default class Items extends Component {
 
-    cycleItem = (item) => {
-        if(this.props[item] === true){
-            
-        }
-    }
+    // toggleItem = (content, itemName) => {
+    //     const payload = {
+    //         content,
+    //         itemName
+    //     }
+    //     this.props.dispatch({
+    //         type:'TOGGLE_ITEM',
+    //         payload
+    //     })
+
+    // }
+    // toggleDungeon = (crystal, name) => {
+    //     const payload = {
+    //         crystal,
+    //         name
+    //     }
+    //     this.props.dispatch({
+    //         type:'TOGGLE_DUNGEON',
+    //         payload
+    //     })
+
+    // }
 
 
     render(){
@@ -20,8 +37,8 @@ export default class Items extends Component {
             <div>
                 <div className='row'>
                     {/* <button onClick={() => this.cycleItem(this.props, 'bow')}>click</button> */}
-                    <button onClick={() => this.props.toggleItem(this.props.bow, 'bow', 'INCREMENT_COUNTER')}>click</button>
-                    <div className={`item ${itemData.bow[0]}`} onClick={() => this.props.toggleItem(this.props.getItems, 'bow', 'TOGGLE_ITEM')}></div>
+                    <button onClick={() => this.props.toggleDungeon(this.props.bow, 'bow')}>click</button>
+                    <div className={`item ${itemData.bow[0]}`} onClick={() => this.props.toggleItem(this.props.bow, 'bow')}></div>
                     <div className={`item ${itemData.boomerang[0]}`}></div>
                     <div className={`item ${itemData.hookshot[0]}`}></div>
                     <div className={`item ${itemData.bomb[0]}`}></div>
