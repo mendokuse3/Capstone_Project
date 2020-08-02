@@ -1,6 +1,7 @@
 import itemData from './assets/itemData';
-import dungeons from './assets/dungeons';
-import etc from './assets/etc';
+import objectives from './assets/objectives';
+import rewards from './assets/rewards';
+
 
 
 const stateData = {
@@ -34,19 +35,19 @@ const stateData = {
     sword: {has: false, current: itemData.sword, counter: 0},
     shield: {has: false, current: itemData.shield, counter: 0},
     tunic: {has: false, current: itemData.tunic, counter: 0},
-    EP: {has: false, current: dungeons.EP, counter: 0},
-    DP: {has: false, current: dungeons.DP, counter: 0},
-    TH: {has: false, current: dungeons.TH, counter: 0},
-    PD: {has: false, current: dungeons.PD, counter: 0},
-    SP: {has: false, current: dungeons.SP, counter: 0},
-    SW: {has: false, current: dungeons.SW, counter: 0},
-    TT: {has: false, current: dungeons.TT, counter: 0},
-    IP: {has: false, current: dungeons.IP, counter: 0},
-    MM: {has: false, current: dungeons.MM, counter: 0},
-    TR: {has: false, current: dungeons.TR, counter: 0},
-    gomode: {has: false, current: etc.gomode, counter: 0},
-    agahnim: {has: false, current: etc.agahnim, counter: 0},
-    crystal: {has: false, current: etc.crystal, counter: 0}
+    EP: {has: false, current: objectives.EP, counter: 0, rewards: rewards},
+    DP: {has: false, current: objectives.DP, counter: 0, rewards: rewards},
+    TH: {has: false, current: objectives.TH, counter: 0, rewards: rewards},
+    PD: {has: false, current: objectives.PD, counter: 0, rewards: rewards},
+    SP: {has: false, current: objectives.SP, counter: 0, rewards: rewards},
+    SW: {has: false, current: objectives.SW, counter: 0, rewards: rewards},
+    TT: {has: false, current: objectives.TT, counter: 0, rewards: rewards},
+    IP: {has: false, current: objectives.IP, counter: 0, rewards: rewards},
+    MM: {has: false, current: objectives.MM, counter: 0, rewards: rewards},
+    TR: {has: false, current: objectives.TR, counter: 0, rewards: rewards},
+    gomode: {has: false, current: objectives.gomode, counter: 0},
+    agahnim: {has: false, current: objectives.agahnim, counter: 0},
+    // crystal: {has: false, current: crystal.crystal, counter: 0}
 }
 
 export default stateData;

@@ -8,7 +8,7 @@ import TrackerContext from './context/Context'
 export default function App() {
  const [stateData, setStateData] = useState(TrackerContext._currentValue.stateData)
     // console.log(this.state.stateData)
-  const handleTrackerContent = (item, key, value) => {
+  const handleTrackerContent = (item) => {
     // setStateData({
     //   ...stateData,
     //   [item]: {
