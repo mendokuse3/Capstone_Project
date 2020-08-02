@@ -1,15 +1,16 @@
-import React, {Component} from 'react';
+import React, {Component, useContext} from 'react';
 import itemData from '../assets/itemData';
 import dungeons from '../assets/dungeons';
 import etc from '../assets/etc';
 import '../css/Item.css';
+import TrackerContext from '../context/Context'
 
 
-export default class Items extends Component {
-
-
-    render(){
-        console.log()
+// export default class Items extends Component {
+export default function Items(props) {
+    const data = useContext(TrackerContext)
+    // render(){
+        console.log(props)
         return (
             <div>
                 {/* {this.props.seedData && this.props.seedData.bow.current.map((item, i) => {
@@ -19,6 +20,7 @@ export default class Items extends Component {
                     )
                 })} */}
                 <div className='row'>
+                    <button onClick={() => props.handleTrackerContent('bow', 'counter', 100 )}>click</button>
                     {/* <button onClick={() => this.props.toggleDungeon(this.prop.seedData.bow, 'bow')}>click</button> */}
                     <div className={`item ${itemData.bow[0]}`} ></div>
                     <div className={`item ${itemData.boomerang[0]}`}></div>
@@ -82,7 +84,7 @@ export default class Items extends Component {
 
             </div>
         )
-    }
+    // }
 }
 
 

@@ -1,11 +1,11 @@
-import { createContext } from 'react';
+import React from 'react';
 import stateData from '../stateData';
 
-const TrackerContext = createContext({
+const TrackerContext = React.createContext({
     stateData,
     handleTrackerContext: () => {
 
     }
 });
 
-export default TrackerContext
+export default TrackerContext;
