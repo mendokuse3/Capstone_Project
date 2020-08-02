@@ -1,4 +1,4 @@
-import React, {Component, useContext} from 'react';
+import React, { useContext} from 'react';
 import itemData from '../assets/itemData';
 import dungeons from '../assets/dungeons';
 import etc from '../assets/etc';
@@ -10,7 +10,7 @@ import TrackerContext from '../context/Context'
 export default function Items(props) {
     const data = useContext(TrackerContext)
     // render(){
-        console.log(props)
+        // console.log(props)
         return (
             <div>
                 {/* {this.props.seedData && this.props.seedData.bow.current.map((item, i) => {
@@ -20,9 +20,9 @@ export default function Items(props) {
                     )
                 })} */}
                 <div className='row'>
-                    <button onClick={() => props.handleTrackerContent('bow', 'counter', 100 )}>click</button>
+                    {/* <button onClick={() => props.handleTrackerContent('bow', 'counter', 100 )}>click</button> */}
                     {/* <button onClick={() => this.props.toggleDungeon(this.prop.seedData.bow, 'bow')}>click</button> */}
-                    <div className={`item ${itemData.bow[0]}`} ></div>
+                    <div className={`item ${itemData.bow[0]}`} onClick={() => props.handleTrackerContent('bow', 'counter', 100 )} ></div>
                     <div className={`item ${itemData.boomerang[0]}`}></div>
                     <div className={`item ${itemData.hookshot[0]}`}></div>
                     <div className={`item ${itemData.bomb[0]}`}></div>

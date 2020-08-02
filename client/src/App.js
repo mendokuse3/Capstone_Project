@@ -9,13 +9,44 @@ export default function App() {
  const [stateData, setStateData] = useState(TrackerContext._currentValue.stateData)
     // console.log(this.state.stateData)
   const handleTrackerContent = (item, key, value) => {
-    setStateData({
-      ...stateData,
-      [item]: {
-        ...stateData[item],
-        [key]: value
+    // setStateData({
+    //   ...stateData,
+    //   [item]: {
+    //     ...stateData[item],
+    //     [key]: value
+    //   }
+    // })
+    if(stateData[item].has === false){
+      setStateData({
+          ...stateData,
+          [item]: {
+            ...stateData[item],
+            has: true
+          }
+        })
+        console.log(stateData[item].current[stateData[item].counter])
+    } else {
+      if(stateData[item].counter < stateData[item].current.length - 1){
+        setStateData({
+          ...stateData,
+          [item]: {
+            ...stateData[item],
+            counter: stateData[item].counter += 1
+          }
+        })
+        console.log(stateData[item].current[stateData[item].counter])
       }
-    })
+      else {
+        setStateData({
+          ...stateData,
+          [item]: {
+            ...stateData[item],
+            counter: 0,
+            has: false
+          }
+        })
+      }
+    }
   }
   return (
     <TrackerContext.Provider value={stateData} >
