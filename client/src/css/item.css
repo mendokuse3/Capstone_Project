@@ -204,3 +204,60 @@ background-image: url('../assets/items/magic2.png');
 }
 
 /* write in background images for dungeons and etc files */
+/* dungeons */
+
+.EP {
+    background-image: url('../assets/dungeons/EP.png');
+}
+.DP {
+    background-image: url('../assets/dungeons/DP.png');
+}
+.TH {
+    background-image: url('../assets/dungeons/TH.png');
+}
+.PD {
+    background-image: url('../assets/dungeons/PD.png');
+}
+.SP {
+    background-image: url('../assets/dungeons/SP.png');
+}
+.SW {
+    background-image: url('../assets/dungeons/SW.png');
+}
+.TT {
+    background-image: url('../assets/dungeons/TT.png');
+}
+.IP {
+    background-image: url('../assets/dungeons/IP.png');
+}
+.MM {
+    background-image: url('../assets/dungeons/MM.png');
+}
+.TR {
+    background-image: url('../assets/dungeons/TR.png');
+}
+
+/* crystal/pendant/etc */
+
+.unknown {
+    background-image: url('../assets/overlay/reward-unknown.png');
+}
+.crystal {
+    background-image: url('../assets/overlay/reward-standardCrystal.png');
+}
+.fairyCrystal {
+    background-image: url('../assets/overlay/reward-fairyCrystal.png');
+}
+.greenPendant {
+    background-image: url('../assets/overlay/reward-greenPendant.png');
+}
+.standardPendant {
+    background-image: url('../assets/overlay/reward-standardPendant.png');
+}
+
+.gomode {
+    background-image: url('../assets/dungeons/gomode.png');
+}
+.agahnim0 {
+    background-image: url('../assets/bosses/agahnim0.png');
+}

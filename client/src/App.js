@@ -24,7 +24,7 @@ export default function App() {
             has: true
           }
         })
-        console.log(stateData[item].current[stateData[item].counter])
+        return stateData[item].current[stateData[item].counter]
     } else {
       if(stateData[item].counter < stateData[item].current.length - 1){
         setStateData({
@@ -34,7 +34,7 @@ export default function App() {
             counter: stateData[item].counter += 1
           }
         })
-        console.log(stateData[item].current[stateData[item].counter])
+        return stateData[item].current[stateData[item].counter]
       }
       else {
         setStateData({

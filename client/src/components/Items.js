@@ -10,11 +10,11 @@ import TrackerContext from '../context/Context'
 export default function Items(props) {
     const data = useContext(TrackerContext)
     // render(){
-        console.log(data)
+        // console.log(data)
         return (
             <div>
                 {data && Object.keys(data).map((item, i) => {
-                    // console.log(data[item].cur)
+                    // console.log(item)
                     if(data[item].rewards !== undefined){
                         return (
                             <div key={i}>
@@ -24,7 +24,7 @@ export default function Items(props) {
                         )
                     } else {
                         return(
-                            <div className={`item ${data[item].current[0]}`} key={i}> </div>
+                            <div className={`item ${data[item].current[data[item].counter]}`} key={i} onClick={() => props.handleTrackerContent(item)}> </div>
                         )
                     }
                 })}
