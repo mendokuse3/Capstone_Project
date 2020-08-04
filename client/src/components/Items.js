@@ -19,20 +19,18 @@ export default function Items(props) {
                         return (
                             <div key={i}>
                                 <div className={`item ${data[item].current[0]}`}> </div>
-                                <div className={`item ${data[item].rewards[0]}`}> </div>
+                                <div className={`item ${data[item].rewards[data[item].counter]}`} onClick={() => props.handleTrackerReward(item)}> </div>
                             </div>
                         )
                     } else {
                         return(
-                            <div className={`item ${data[item].current[data[item].counter]}`} key={i} onClick={() => props.handleTrackerContent(item)}> </div>
+                            <div className={`item ${data[item].current[data[item].counter]}`} key={i} onClick={() => props.handleTrackerItem(item)}> </div>
                         )
                     }
                 })}
             </div>
             // <div>
             //     <div className='row'>
-            //         {/* <button onClick={() => props.handleTrackerContent('bow', 'counter', 100 )}>click</button> */}
-            //         {/* <button onClick={() => this.props.toggleDungeon(this.prop.seedData.bow, 'bow')}>click</button> */}
             //         <div className={`item ${itemData.bow[0]}`} onClick={() => props.handleTrackerContent('bow')} ></div>
             //         <div className={`item ${itemData.boomerang[0]}`}></div>
             //         <div className={`item ${itemData.hookshot[0]}`} onClick={() => props.handleTrackerContent('hookshot')}></div>
