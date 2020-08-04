@@ -3,11 +3,37 @@
     justify-content: space-between;
 } */
 
-.item {
-    height: 60px;
-    width: 60px;
+.tracker-area {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+}
+
+.tracker-element {
+    height: 100px;
+    width: 100px;
     background-repeat: no-repeat;
 }
+
+.item {
+    background-size: contain;
+    background-color: black;
+}
+
+.dungeon {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+.dungeon-reward {
+    background-size: contain;
+}
+
+.does-not-have {
+    filter: grayscale(1)
+}
+
 
 .bomb {
 background-image: url('../assets/items/bomb.png')

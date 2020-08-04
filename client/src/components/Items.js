@@ -12,19 +12,20 @@ export default function Items(props) {
     // render(){
         // console.log(data)
         return (
-            <div>
+            <div className='tracker-area'>
                 {data && Object.keys(data).map((item, i) => {
                     // console.log(item)
                     if(data[item].rewards !== undefined){
                         return (
-                            <div key={i}>
-                                <div className={`item ${data[item].current[0]}`}> </div>
-                                <div className={`item ${data[item].rewards[data[item].counter]}`} onClick={() => props.handleTrackerReward(item)}> </div>
+                            <div className='dungeon' key={i}>
+                                <div className={`tracker-element dungeon-name ${data[item].current[0]}`}>
+                                <div className={`tracker-element dungeon-reward ${data[item].rewards[data[item].counter]}`} onClick={() => props.handleTrackerReward(item)}> </div>
+                                </div>
                             </div>
                         )
                     } else {
                         return(
-                            <div className={`item ${data[item].current[data[item].counter]}`} key={i} onClick={() => props.handleTrackerItem(item)}> </div>
+                            <div className={`tracker-element item ${data[item].current[data[item].counter]} ${data[item].has ? '' : 'does-not-have'}`} key={i} onClick={() => props.handleTrackerItem(item)}> </div>
                         )
                     }
                 })}
