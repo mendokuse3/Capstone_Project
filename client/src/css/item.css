@@ -2,12 +2,20 @@
 .tracker-area {
     display: flex;
     flex-wrap: wrap;
-    width: 700px;
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 10%;
 }
 
-.tracker-element {
-    height: 100px;
-    width: 100px;
+.item, .dungeon {
+    height: calc(100% / 6);
+    width: calc(100% / 7);
+    background-repeat: no-repeat;
+}
+
+.dungeon .tracker-element {
+    height: 100%;
+    width: 100%;
     background-repeat: no-repeat;
 }
 
@@ -28,6 +36,10 @@
 
 .does-not-have {
     filter: grayscale(100%)
+}
+
+.reset-button {
+    margin: 3% auto;
 }
 
 

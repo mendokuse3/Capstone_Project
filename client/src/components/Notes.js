@@ -53,7 +53,7 @@ export const Notes = () => {
                         }))
                         }
                     </div>
-                    <Form className='form' state={state} updateNotes={setState}/>
+                    <Form state={state} updateNotes={setState}/>
                 </div>
             }
         </div>

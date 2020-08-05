@@ -12,8 +12,8 @@ export default function Items(props) {
                     if(data[item].rewards !== undefined){
                         return (
                             <div className='dungeon' key={i}>
-                                <div className={`tracker-element dungeon-name ${data[item].current[0]}`}>
-                                <div className={`tracker-element dungeon-reward ${data[item].rewards[data[item].counter]}`} onClick={() => props.handleTrackerReward(item)}> </div>
+                                <div className={`tracker-element dungeon-reward ${data[item].rewards[data[item].counter]}`} onClick={() => props.handleTrackerReward(item)}>
+                                <div className={`tracker-element dungeon-name ${data[item].current[0]}`} />
                                 </div>
                             </div>
                         )
@@ -23,7 +23,7 @@ export default function Items(props) {
                         )
                     }
                 })}
-                <button onClick={() => props.resetTracker()}>Reset</button>
+                <button className='reset-button' onClick={() => props.resetTracker()}>Reset</button>
             </div>
         )
 }
