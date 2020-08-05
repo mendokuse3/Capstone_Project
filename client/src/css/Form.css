@@ -1,4 +1,4 @@
-#newNote {
+.note-form {
     border: 1px solid black;
     width: 70%;
     margin: auto;
@@ -33,7 +33,7 @@
 }
 
 
-#newNote input[type='submit'] {
+.note-form input[type='submit'] {
     width: 30%;
     margin-top: 5%;
 }

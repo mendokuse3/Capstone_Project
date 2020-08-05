@@ -34,7 +34,7 @@ export default class Form extends Component {
 
     render(){
         return (
-            <form onSubmit={this.handleSubmit} id='newNote'>
+            <form onSubmit={this.handleSubmit} className='note-form' id='editNote'>
                 <div className='inputs'>
                     <div className='item-name'>
                         <label htmlFor="item_name">Item Name:</label>
@@ -42,7 +42,7 @@ export default class Form extends Component {
                     </div>
                     <div className='item-description'>
                         <label htmlFor="description">Description:</label>
-                        <textarea form='newNote'id='description' value={this.state.description} onChange={this.handleChange}></textarea>
+                        <textarea form='editNote'id='description' value={this.state.description} onChange={this.handleChange}></textarea>
                     </div>
                 </div>
                 <input type='submit' />

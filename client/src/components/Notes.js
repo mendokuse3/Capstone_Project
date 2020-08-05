@@ -36,6 +36,7 @@ export const Notes = () => {
 
     return(
         <div className='note-container'>
+            <h2>Notes Here</h2>
             { selectedNote ? <Edit reRenderNotes={getData} goBack={setSelectedNote} selectedNote={selectedNote} /> : 
                <div>
                 <div className='card-container'>
