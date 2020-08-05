@@ -77,10 +77,14 @@ export default function App() {
     }
   }
 
+  const resetTracker = () => {
+    setStateData(TrackerContext._currentValue.stateData)
+  }
+
   return (
     <TrackerContext.Provider value={stateData} >
       <div className="App">
-          <Items handleTrackerItem={handleTrackerItem} handleTrackerReward={handleTrackerReward}/>
+          <Items resetTracker={resetTracker} handleTrackerItem={handleTrackerItem} handleTrackerReward={handleTrackerReward}/>
           <Notes />
       </div>
     </TrackerContext.Provider>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Form from './NoteForm';
 import Edit from './EditForm';
+import '../css/Note.css';
 
 export const Notes = () => {
     const [state, setState] = useState([]);
@@ -34,21 +35,25 @@ export const Notes = () => {
     }, [])
 
     return(
-        <div>
+        <div className='note-container'>
             { selectedNote ? <Edit reRenderNotes={getData} goBack={setSelectedNote} selectedNote={selectedNote} /> : 
-                <div>
-                    {
-                    loading ? <div>Loading...</div> : (state.map( (note, index) => {
-                        return (
-                            <div key={index} >
-                                {note.item_name} is at {note.description}
-                                <button onClick={() => setSelectedNote(note)}>Edit</button>
-                                <button onClick={() => deleteNote(note._id, index)}>Delete</button>
-                            </div>
-                        )
-                    }))
-                    }
-                    <Form state={state} updateNotes={setState}/>
+               <div>
+                <div className='card-container'>
+                        {
+                        loading ? <div>Loading...</div> : (state.map( (note, index) => {
+                            return (
+                                <div className='item-card' key={index} >
+                                    <p>{note.item_name} is at {note.description}</p>
+                                    <div className='note-buttons'>
+                                        <button onClick={() => setSelectedNote(note)}>Edit</button>
+                                        <button onClick={() => deleteNote(note._id, index)}>Delete</button>
+                                    </div>
+                                </div>
+                            )
+                        }))
+                        }
+                    </div>
+                    <Form className='form' state={state} updateNotes={setState}/>
                 </div>
             }
         </div>
