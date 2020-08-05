@@ -3,6 +3,8 @@ import {Notes} from './components/Notes'
 import Items from './components/Items'
 import TrackerContext from './context/Context'
 
+import './css/App.css';
+
 
 
 export default function App() {
