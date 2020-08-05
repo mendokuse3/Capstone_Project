@@ -24,6 +24,17 @@
 .item-name input {
     width: 65%;
     margin: 5% 0;
+    height: 40px;
+    font-size: larger;
+}
+
+.item-name label {
+    text-align: left;
+}
+
+.item-description label {
+    text-align: left;
+    margin-bottom: 3%;
 }
 
 .item-description textarea {
@@ -36,4 +47,9 @@
 .note-form input[type='submit'] {
     width: 30%;
     margin-top: 5%;
+}
+
+
+.go-back {
+    margin-bottom: 5%;
 }

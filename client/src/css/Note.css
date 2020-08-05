@@ -1,4 +1,8 @@
 
+.note-container {
+    text-align: center;
+}
+
 .card-container {
     width: 100%;
     display: flex;

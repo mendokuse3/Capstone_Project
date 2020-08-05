@@ -44,7 +44,7 @@ export const Notes = () => {
                         loading ? <div>Loading...</div> : (state.map( (note, index) => {
                             return (
                                 <div className='item-card' key={index} >
-                                    <p>{note.item_name} is at {note.description}</p>
+                                    <p>{note.item_name !== '' ? `${note.item_name} is at ${note.description}` : note.description}</p>
                                     <div className='note-buttons'>
                                         <button onClick={() => setSelectedNote(note)}>Edit</button>
                                         <button onClick={() => deleteNote(note._id, index)}>Delete</button>

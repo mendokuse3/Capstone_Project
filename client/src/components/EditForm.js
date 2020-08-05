@@ -46,7 +46,7 @@ export default class Edit extends Component {
                     </div>
                     <input type='submit' />
                 </form>
-                <button onClick={() => this.props.goBack(undefined)}>Go Back</button>
+                <button className='go-back' onClick={() => this.props.goBack(undefined)}>Go Back</button>
             </div>
         )
     }
