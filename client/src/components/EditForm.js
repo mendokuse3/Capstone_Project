@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../css/Form.css';
 
 export default class Edit extends Component {
     state = {
@@ -32,14 +33,20 @@ export default class Edit extends Component {
     render(){
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="item_name">Item Name:</label>
-                    <input id='item_name' value={this.state.item_name} onChange={this.handleChange}/>
-                    <label htmlFor="description">Description:</label>
-                    <input id='description' value={this.state.description} onChange={this.handleChange}/>
+                <form onSubmit={this.handleSubmit} className='note-form' id='newNote'>
+                    <div className='inputs'>
+                        <div className='item-name'>
+                            <label htmlFor="item_name">Item Name:</label>
+                            <input id='item_name' value={this.state.item_name} onChange={this.handleChange}/>
+                        </div>
+                        <div className='item-description'>
+                            <label htmlFor="description">Description:</label>
+                            <textarea form='newNote' id='description' value={this.state.description} onChange={this.handleChange}/>
+                        </div>
+                    </div>
                     <input type='submit' />
                 </form>
-                <button onClick={() => this.props.goBack(undefined)}>Go Back</button>
+                <button className='go-back' onClick={() => this.props.goBack(undefined)}>Go Back</button>
             </div>
         )
     }

@@ -1,4 +1,4 @@
-const dungeons = {
+const objectives = {
     DP: ['DP'],
     EP: ['EP'],
     IP: ['IP'],
@@ -8,7 +8,9 @@ const dungeons = {
     SW: ['SW'],
     TH: ['TH'],
     TR: ['TR'],
-    TT: ['TT']
+    TT: ['TT'],
+    gomode: ['gomode'],
+    agahnim: ['agahnim0']
 }
 
-export default dungeons;
+export default objectives;
