@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../css/Form.css';
 
 export default class Form extends Component {
     state = {
@@ -33,11 +34,17 @@ export default class Form extends Component {
 
     render(){
         return (
-            <form onSubmit={this.handleSubmit}>
-                <label htmlFor="item_name">Item Name:</label>
-                <input id='item_name' value={this.state.item_name} onChange={this.handleChange}/>
-                <label htmlFor="description">Description:</label>
-                <input id='description' value={this.state.description} onChange={this.handleChange}/>
+            <form onSubmit={this.handleSubmit} className='note-form' id='editNote'>
+                <div className='inputs'>
+                    <div className='item-name'>
+                        <label htmlFor="item_name">Item Name:</label>
+                        <input type='text' id='item_name' value={this.state.item_name} onChange={this.handleChange}/>
+                    </div>
+                    <div className='item-description'>
+                        <label htmlFor="description">Description:</label>
+                        <textarea form='editNote'id='description' value={this.state.description} onChange={this.handleChange}></textarea>
+                    </div>
+                </div>
                 <input type='submit' />
             </form>
         )
