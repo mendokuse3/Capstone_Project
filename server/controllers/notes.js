@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
 // =======
 
 router.put('/:id', (req, res) => {
-    Notes.findOneAndUpdate(req.params.id, req.body, (err, updatedNote) => {
+    Notes.findByIdAndUpdate(req.params.id, req.body, (err, updatedNote) => {
         res.json(updatedNote);
     })
 })
@@ -38,7 +38,7 @@ router.put('/:id', (req, res) => {
 // =======
 
 router.delete('/:id', (req, res) => {
-    Notes.findOneAndDelete(req.params.id, (err, deletedNote) => {
+    Notes.findByIdAndDelete(req.params.id, (err, deletedNote) => {
         res.json(deletedNote);
     })
 })
