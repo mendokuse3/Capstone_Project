@@ -1,5 +1,5 @@
 import React, { useContext} from 'react';
-import '../css/item.css';
+import '../css/Item.css';
 import TrackerContext from '../context/Context'
 
 

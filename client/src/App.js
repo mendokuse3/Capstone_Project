@@ -51,7 +51,7 @@ export default function App() {
           [item]: {
             ...stateData[item],
             has: true,
-            counter: stateData[item].counter += 1
+            counter: stateData[item].counter = 1
           }
         })
       return stateData[item].current[stateData[item].counter]
