@@ -7,8 +7,8 @@ A working full-stack CRUD application using Ruby on Rails with React and Redux, 
 ## The App
 [Go To The Project](https://infallible-saha-79caf7.netlify.app/)
 
-[Server was deployed on Netlify ](https://github.com/mendokuse3/capstone-server-netlify)
-[Client was deployed on Heroku](https://github.com/mendokuse3/capstone-client-netlify)
+- [Server was deployed on Netlify ](https://github.com/mendokuse3/capstone-server-netlify)
+- [Client was deployed on Heroku](https://github.com/mendokuse3/capstone-client-netlify)
 
 
 ## Technologies Used
