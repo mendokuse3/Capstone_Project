@@ -29,12 +29,15 @@ As a User, I want to be able to:
 
 
 ## Approach
+I split the app into a few different parts, setting some time to gather and organize images and data for the tracker portion of the app, as well as organizing the data for it.  After setting up the backend and a basic front end, I set aside about a week to try to learn redux and incorporate it into my app. The final few days were left to work on styling and adding any finishing touches, as well as stretch goals, which I did not have time to do.
 
 
 ## Challenges
+- Learning redux ended up being far more difficult and taking far longer than I originally expected. I had expected to take about three days to learn it enough to add to my app, but after five or six days of coming to a complete stand still, I had to abort and spent another day learning the react context api before applying it. As a result, I did not have time to do any stretch goals.
+- I had a bug with my dungeons in which every reset would increment the dungeon counter by one more than what it started as, but only after the dungeon had been clicked. I solved this by hardcoding in the counters to be 0.
 
 
 ## Things to revisit/Unsolved problems
-
+- I would love to go back and add in user authentication. As it stands now, only one person could use the app at a time in theory, as every note that is submited by a user would render in the same place.  Having users sign in and having the notes tied to a user would allow for multiple different users use the app at the same time without having to discern their note from anothers.
 
 
